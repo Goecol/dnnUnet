@@ -109,7 +109,7 @@ class UNet(nn.Module):
         xdec42 = relu(self.dec42(xdec41))
 
         # Output layer
-        out = self.outconv(xdec42)
+        out = self.outconv(xdec42
 
         return out
     
