@@ -27,7 +27,7 @@ val_dir = "/home/johnbosco/soybean/dataset_UNET/val/001.lessthan40/"
 val_mask_dir = "/home/johnbosco/soybean/dataset_UNET/pre_processed/val/001.lessthan40/"
 test_dir = "/home/johnbosco/soybean/dataset_UNET/test/001.lessthan40/"
 test_mask_dir = "/home/johnbosco/soybean/dataset_UNET/pre_processed/test/001.lessthan40/"
-batch_size = 1
+batch_size = 7
 train_loss = []
 val_loss = []
 
@@ -511,8 +511,8 @@ def run(UNet):
     in_channels = 3
     num_class = 2
     num_out_channels = 1 # for binary segmentation, the output channel = 1
-    batch_size = 1
-    num_epochs = 2
+    batch_size = 7
+    num_epochs = 50
     device = getDevice()
 
     model = UNet(num_class, num_out_channels).to(device)
